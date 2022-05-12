@@ -1,0 +1,192 @@
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>TRANSPORTE SIRO</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <style type="text/css">
+            a:link {
+                color: #999999;
+            }
+            a:visited {
+                color: #999999;
+            }
+            a:hover {
+                color: #999999;
+            }
+            a:active {
+                color: #999999;
+            }
+        </style>
+        <!--nav-->
+        <script src="js/jquery.min.js"></script>
+        <script>
+            $(function () {
+                var pull = $('#pull');
+                menu = $('nav ul');
+                menuHeight = menu.height();
+
+                $(pull).on('click', function (e) {
+                    e.preventDefault();
+                    menu.slideToggle();
+                });
+
+                $(window).resize(function () {
+                    var w = $(window).width();
+                    if (w > 320 && menu.is(':hidden')) {
+                        menu.removeAttr('style');
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header_bg">
+            <div class="wrap">
+                <div class="header">
+                    <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="" width="180" height="134" /></a> </div>
+                    <div class="cssmenu">
+                        <ul>
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="empresa.html">Empresa</a></li>
+                            <li><a href="servicios.html">Servicios</a></li>
+                            <li><a href="sucursales.html">Sucursales</a></li>
+                            <li class="last"><a href="contacto.html">Contacto</a></li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="top-nav">
+                        <nav class="clearfix">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="empresa.html">Empresa</a></li>
+                                <li><a href="servicios.html">Servicios</a></li>
+                                <li><a href="sucursales.html">Sucursales</a></li>
+                                <li class="last"><a href="contacto.html">Contacto</a></li>
+                            </ul>
+                            <a href="#" id="pull">Menu</a> </nav>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <!-- start mian -->
+        <div class="main_bg">
+            <div class="wrap">
+                <div class="main">
+
+                    <div class="contact">
+                        <div class="blog_list">
+                            <h2 class="style">CONTÁCTESE</h2>
+                            <h5>CONSULTAS, SUGERENCIAS, RECLAMOS<a href="index.html"></a></h5>
+                            <div class="blog_para">
+                                <p class="para"><a class="popup-with-zoom-anim" href="#small-dialog"><img src="images/blog1.jpg" alt="" width="229" height="152"></a>Si desea realizar cualquier tipo de consulta, sugerencia o reclamo, envíenos un mail o comuníquese a nuestros teléfonos, que le responderemos a la brevedad.</p>
+                                <p class="para">Gracias por su consulta!</p>
+                                <p class="para">&nbsp;</p>
+                                <div class="read_more1">
+                                    <a href="mailto:buenosaires@transportesiro.com.ar" target="new" class="btn_s">enviar consulta</a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="contact-form">
+                            <div class="content">
+                                <h2 class="style">PIDA SU PRESPUESTO</h2>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                            </div>
+                            <form method="post" action="cgi-bin/action.php">
+                                <input type="hidden" name="to" value="buenosaires@transportesiro.com.ar" />
+                                <input type="hidden" name="subject" value="Presupuesto desde pagina web" />
+                                <input type="hidden" name="redirect" value="http://www.transportesiro.com.ar/contactoenviado.html">
+                                <input type="hidden" name="from" value="noresponder@transportesiro.com.ar">
+                                <div>
+                                    <span>
+                                        <label>NOMBRE</label></span>
+                                    <span><input name="Nombre" type="text" class="textbox" required></span>
+                                </div>
+                                <div>
+                                    <span><label>E-MAIL</label></span>
+                                    <span><input name="Email" type="text" class="textbox" required></span>
+                                </div>
+                                <div>
+                                    <span>
+                                        <label>TELEFONO</label></span>
+                                    <span><input name="Telefono" type="text" class="textbox"></span>
+                                </div>
+                                <div>
+                                    <span>
+                                        <label>CANTIDAD DE BULTOS</label></span>
+                                    <span><input name="Cantidad de bultos" type="text" class="textbox"></span>
+                                </div>
+                                <div>
+                                    <span>
+                                        <label>MEDIDAS (largo x ancho x profundo)</label></span>
+                                    <span><input name="Medidas" type="text" class="textbox"></span>
+                                </div>
+                                <div>
+                                    <span>
+                                        <label>PESO (kilos)</label></span>
+                                    <span><input name="Peso" type="text" class="textbox"></span>
+                                </div>
+                                <div>
+                                    <span>
+                                        <label>VALOR DECLARADO</label></span>
+                                    <span><input name="Valor declarado" type="text" class="textbox"></span>
+                                </div>
+                                <div>
+                                    <span>
+                                        <label>DESTINO DE LA MERCADERIA</label></span>
+                                    <span><input name="Destino" type="text" class="textbox"></span>
+                                </div>
+                                <div>
+                                    <span>
+                                        <label>LUGAR DE PAGO (Bs. As. o en el Interior)</label></span>
+                                    <span><input name="Lugar de Pago" type="text" class="textbox"></span>
+                                </div>
+                                <div>
+                                    <span>
+                                        <label>COMENTARIOS </label></span>
+                                    <span><textarea name="Comentarios"> </textarea></span>
+                                </div>
+                                <div>
+                                    <span><input type="submit" class="" value="Enviar"></span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="clear"> </div>		
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_top_bg">
+            <div class="wrap">
+                <div class="footer_top">
+                    <h2>BUENOS AIRES - CHACO - FORMOSA - CORRIENTES <a href="index.html"></a></h2>
+                </div>
+            </div>
+        </div>
+        <!-- start footer  -->
+        <div class="footer_bg">
+            <div class="wrap">
+                <div class="footer">
+                    <div class="copy">
+                        <p class="w3-link">TRANSPORTE SIRO DE ALASSIA NONO S.R.L.<br>
+                            Casa Central: Luna 360 (1437) Buenos Aires - Tel. Of.: (011) 4941-3792 - Depósito: 4942-1920
+                        </p>
+                        <p class="w3-link">&nbsp;</p>
+                        <p class="w3-link">&nbsp;</p>
+                        <p class="w3-link">&nbsp;</p>
+                        <div class="md">Diseño por <a href="http://www.mdcvisual.com.ar" target="_blank">md comunicación visual</a></div>
+                        <p class="copy p2">&nbsp;</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
